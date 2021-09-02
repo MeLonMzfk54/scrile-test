@@ -1,0 +1,450 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*--------------------------------------------------МИКСИН ДЛЯ АДАПТИВНОГО ТЕКСТА--------------------------------------------------------*/
+/*--------------------------------------------------МИКСИН ДЛЯ ПСЕВДОЭЛЕМЕНТОВ--------------------------------------------------------*/
+/*--------------------------------------------------МИКСИН ДЛЯ ПЛЕЙСХОЛДЕРОВ--------------------------------------------------------*/
+/*--------------------------------------------------УСЕЧЕНИЕ ТЕКСТА--------------------------------------------------------*/
+/*--------------------------------------------------Спрятать\Показать блок--------------------------------------------------------*/
+/*ПЕРЕМЕННЫЕ------------------------------------------------------------------------*/
+/*ширина контейнера*/
+/*Отступы у контейнера*/
+/*Максимальная ширина*/
+/*Минимальная ширина*/
+/*КОНТЕЙНЕР------------------------------------------------------------------------*/
+.container {
+  max-width: 1180px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+/*ВРАППЕР------------------------------------------------------------------------*/
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+}
+
+/*
+* Modal styles
+**/
+.modal {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  padding: 25px;
+  max-width: 580px;
+}
+.modal__bg {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 49;
+}
+.modal__close {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  cursor: pointer;
+}
+.modal__close div {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 10px;
+}
+.modal__close div::before, .modal__close div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 1px;
+  top: 12.5px;
+  left: 3px;
+  background: #5B5B5B;
+}
+.modal__close div:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.modal__close div:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.modal__title {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.modal__item {
+  position: relative;
+}
+.modal__item label {
+  position: absolute;
+  left: 15px;
+  color: #787B80;
+  top: 43px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  top: 25px;
+  font-size: 15px;
+}
+.modal__item input {
+  display: block;
+  border: 1px solid #C3C3C3;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 20px 0px 20px 15px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.modal__item input:placeholder {
+  opacity: 0;
+}
+.modal__item input:-moz-placeholder {
+  opacity: 0;
+}
+.modal__item input::-moz-placeholder {
+  opacity: 0;
+}
+.modal__item input:-ms-input-placeholder {
+  opacity: 0;
+}
+.modal__item input::-webkit-input-placeholder {
+  opacity: 0;
+}
+.modal__item input:focus {
+  -webkit-box-shadow: 0px 0px 9px 6px rgba(177, 212, 241, 0.8);
+          box-shadow: 0px 0px 9px 6px rgba(177, 212, 241, 0.8);
+}
+.modal__item textarea {
+  margin-bottom: 30px;
+  border: 1px solid #C3C3C3;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 15px;
+  resize: vertical;
+  padding: 20px 0px 20px 15px;
+}
+.modal__item textarea:placeholder {
+  opacity: 0;
+}
+.modal__item textarea:-moz-placeholder {
+  opacity: 0;
+}
+.modal__item textarea::-moz-placeholder {
+  opacity: 0;
+}
+.modal__item textarea:-ms-input-placeholder {
+  opacity: 0;
+}
+.modal__item textarea::-webkit-input-placeholder {
+  opacity: 0;
+}
+.modal__item textarea:focus {
+  -webkit-box-shadow: 0px 0px 9px 6px rgba(177, 212, 241, 0.8);
+          box-shadow: 0px 0px 9px 6px rgba(177, 212, 241, 0.8);
+}
+.modal__item input:not(:-moz-placeholder-shown) + label, .modal__item textarea:not(:-moz-placeholder-shown) + label {
+  top: 8px;
+  left: 15px;
+  font-size: 10px;
+}
+.modal__item input:not(:-ms-input-placeholder) + label, .modal__item textarea:not(:-ms-input-placeholder) + label {
+  top: 8px;
+  left: 15px;
+  font-size: 10px;
+}
+.modal__item input:focus + label,
+.modal__item input:not(:placeholder-shown) + label,
+.modal__item textarea:focus + label,
+.modal__item textarea:not(:placeholder-shown) + label {
+  top: 8px;
+  left: 15px;
+  font-size: 10px;
+}
+.modal__prod {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal__additinal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+.modal__switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+.modal__switch input {
+  display: none;
+}
+.modal__switch input:checked + .modal__check {
+  background-color: #00A131;
+  border: 3px solid #CEBCBD;
+}
+.modal__switch input:checked + .modal__check:before {
+  -webkit-transform: translateX(22px);
+          transform: translateX(22px);
+  bottom: 0px;
+}
+.modal__check {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CEBCBD;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 34px;
+}
+.modal__check:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background: linear-gradient(207deg, black 0%, #e3b4b4 48%, black 100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+.modal__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 420px) {
+  .modal__item input {
+    padding: 10px 0px 10px 15px;
+    font-size: 14px;
+  }
+  .modal__item textarea {
+    font-size: 14px;
+  }
+  .modal__item label {
+    font-size: 14px;
+    top: 14px;
+  }
+  .modal__item input:not(:-moz-placeholder-shown) + label, .modal__item textarea:not(:-moz-placeholder-shown) + label {
+    top: 2px;
+    left: 15px;
+    font-size: 9px;
+  }
+  .modal__item input:not(:-ms-input-placeholder) + label, .modal__item textarea:not(:-ms-input-placeholder) + label {
+    top: 2px;
+    left: 15px;
+    font-size: 9px;
+  }
+  .modal__item input:focus + label,
+.modal__item input:not(:placeholder-shown) + label,
+.modal__item textarea:focus + label,
+.modal__item textarea:not(:placeholder-shown) + label {
+    top: 2px;
+    left: 15px;
+    font-size: 9px;
+  }
+}
+
+/*
+* Custom select styles
+**/
+.modal__product {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #B8B8B8;
+  border-radius: 5px;
+  max-width: 255px;
+  width: 100%;
+  padding-left: 0;
+}
+.modal__product.active {
+  -webkit-box-shadow: 0px 0px 9px 6px rgba(177, 212, 241, 0.8);
+          box-shadow: 0px 0px 9px 6px rgba(177, 212, 241, 0.8);
+}
+.modal__product select {
+  display: none;
+}
+.modal__product_selected {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #FFFFFF;
+  color: black !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 34px;
+}
+.modal__product_selected:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #C0C0C0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 18px;
+  right: 20px;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+.modal__product_selected:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #C0C0C0;
+  top: 18px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 13px;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+.modal__product_selected.select__arrow_active {
+  background: white;
+  color: black !important;
+  border: none;
+}
+.modal__product_selected.select__arrow_active:after {
+  -webkit-transform: rotate(140deg);
+          transform: rotate(140deg);
+}
+.modal__product_selected.select__arrow_active:before {
+  -webkit-transform: rotate(-140deg);
+          transform: rotate(-140deg);
+}
+.modal__product_items {
+  width: 100.5%;
+  position: absolute;
+  color: black;
+  background-color: white;
+  border: 1px solid #B8B8B8;
+  top: 92%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 34px;
+}
+.modal__product_items div:hover, .modal__product_items .same_as_selected {
+  color: black;
+  background: #EBFDFF;
+}
+.modal__product_selected, .modal__product_items div {
+  border: 1px solid #B8B8B8;
+  color: black;
+  padding: 0px 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.modal__product_hide {
+  display: none;
+}
